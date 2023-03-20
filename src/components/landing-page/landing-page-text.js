@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { CustomPageBtn } from "../custom-buttons/page-button";
 export const IntroText = () => (
   <IntroDiv>
     <Intro>
@@ -15,29 +15,34 @@ export const IntroText = () => (
       Feel free to take a look at my work or get to know a little more about my
       process and how I make a difference in the lives of everyday users.
     </ContentText>
+    <ButtonGroup>
+      <CustomPageBtn color="#9FFF8F">About Me</CustomPageBtn>
+      <CustomPageBtn color="#FFCE31" white={true}>
+        Contact Me
+      </CustomPageBtn>
+    </ButtonGroup>
   </IntroDiv>
 );
 
 const IntroDiv = styled.div`
   text-align: center;
-  margin: none;
 `;
 
 const Intro = styled.h1`
-  font: "Londrina Outline";
+  font-family: "Work Sans";
   font-weight: 500;
   font-size: 64px;
   line-height: 150%;
-  margin-top: none;
+  margin: 0 0;
 `;
 
 const OutlinedSpan = styled.span`
-  font: "Londrina Outline";
-  color: white;
-  text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000,
-    1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
+  font-family: "Londrina Outline", cursive;
+  fill: white;
+  color: black;
 
   &:hover {
+    font-family: "Work Sans";
     background: ${(props) => props.color};
     text-shadow: none;
     padding: 1px 2px 1px;
@@ -61,4 +66,12 @@ const ContentText = styled(TaglineText)`
   font-size: 16px;
   line-height: 19px;
   text-align: center;
+  margin-top: 24px;
+`;
+
+const ButtonGroup = styled.div`
+  width: 75%;
+  margin: 24px auto;
+  display: flex;
+  justify-content: center;
 `;

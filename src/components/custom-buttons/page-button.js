@@ -13,11 +13,17 @@ export const CustomPageBtn = styled.button`
     props.white ? "1px solid rgba(0, 0, 0, 0.36)" : "none"};
   border-radius: 50px;
   margin: 0 auto 0;
+  text-align: center;
   cursor: pointer;
+  text-decoration: none;
   &:hover {
     background: ${(props) => props.color};
     font-style: normal;
     font-weight: 700;
     border: none;
+  }
+
+  &:visited {
+    color: black;
   }
 `;

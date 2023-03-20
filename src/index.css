@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  background: #e5e5e5;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -4,7 +4,7 @@ import { BaseNavLink } from "./nav-links";
 
 export const NavBar = () => {
   return (
-    <nav>
+    <StyledNav>
       <BPNavImg />
       <LinksDiv>
         <BaseNavLink color={`#9FFF8F`}>Work</BaseNavLink>
@@ -12,16 +12,19 @@ export const NavBar = () => {
         <BaseNavLink color={`#F3FF6C`}>Contact</BaseNavLink>
         <BaseNavLink color={`#FFCE31`}>Resume</BaseNavLink>
       </LinksDiv>
-    </nav>
+    </StyledNav>
   );
 };
 
 const LinksDiv = styled.div`
-  position: absolute;
-  top: 64px;
-  right: 64px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   width: 25%;
+`;
+
+const StyledNav = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;

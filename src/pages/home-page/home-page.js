@@ -2,7 +2,8 @@ import { LandingPageTextAndImg } from "../../components/landing-page/landing-pag
 import { ProjectInformation } from "../../components/project-grid/project-grid";
 
 export const HomePage = () => (
-  <>
-    <LandingPageTextAndImg /> <ProjectInformation />
-  </>
+  <div id="home-page">
+    <LandingPageTextAndImg />
+    <ProjectInformation />
+  </div>
 );

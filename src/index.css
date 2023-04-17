@@ -1,7 +1,14 @@
 body {
   margin: 0;
-  background: #e5e5e5;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  position: absolute;
+  width: 100vw;
+  left: 0px;
+  top: 0px;
+  background: linear-gradient(180deg, #c4ebe2 0%, rgba(196, 235, 226, 0) 100%);
 }

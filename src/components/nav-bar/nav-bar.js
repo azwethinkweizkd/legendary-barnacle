@@ -10,13 +10,13 @@ export const NavBar = () => {
         <BaseNavLink color={`#9FFF8F`} to="/">
           Work
         </BaseNavLink>
-        <BaseNavLink color={`#FF8FE6`} to="/about-me">
+        <BaseNavLink color={`#FF8FE6`} to="/about-me" href="/#about">
           About
         </BaseNavLink>
-        <BaseNavLink color={`#F3FF6C`} to="/about-me">
+        <BaseNavLink color={`#F3FF6C`} to="/about-me" href="/#connect">
           Contact
         </BaseNavLink>
-        <BaseNavLink color={`#FFCE31`} to="/about-me">
+        <BaseNavLink color={`#FFCE31`} to="/about-me" href="/#connect">
           Resume
         </BaseNavLink>
       </LinksDiv>
@@ -35,4 +35,7 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 850px) {
+    flex-direction: column;
+  }
 `;

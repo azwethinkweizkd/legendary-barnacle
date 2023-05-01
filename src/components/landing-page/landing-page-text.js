@@ -16,8 +16,10 @@ export const IntroText = () => (
       process and how I make a difference in the lives of everyday users.
     </ContentText>
     <ButtonGroup>
-      <CustomPageBtn color="#9FFF8F">About Me</CustomPageBtn>
-      <CustomPageBtn color="#FFCE31" white={true}>
+      <CustomPageBtn color="#9FFF8F" href="/about-me">
+        About Me
+      </CustomPageBtn>
+      <CustomPageBtn color="#FFCE31" white={true} href="/about-me">
         Contact Me
       </CustomPageBtn>
     </ButtonGroup>
@@ -34,6 +36,12 @@ const Intro = styled.h1`
   font-size: 64px;
   line-height: 150%;
   margin: 0 0;
+  @media screen and (max-width: 600px) {
+    font-size: 48px;
+  }
+  @media screen and (max-width: 475px) {
+    font-size: 32px;
+  }
 `;
 
 const OutlinedSpan = styled.span`
@@ -58,6 +66,9 @@ const TaglineText = styled.p`
   font-size: 20px;
   line-height: 23px;
   text-align: center;
+  @media screen and (max-width: 600px) {
+    font-size: 16px;
+  }
 `;
 
 const ContentText = styled(TaglineText)`
@@ -67,6 +78,9 @@ const ContentText = styled(TaglineText)`
   line-height: 19px;
   text-align: center;
   margin-top: 24px;
+  @media screen and (max-width: 600px) {
+    font-size: 12px;
+  }
 `;
 
 const ButtonGroup = styled.div`

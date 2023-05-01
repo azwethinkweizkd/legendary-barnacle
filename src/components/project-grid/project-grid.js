@@ -26,14 +26,21 @@ export const ProjectInformation = () => {
     setProjectClicked(e.target.id);
     onOpen();
   };
+
+  const handleProjectModalClose = () => {
+    setProjectClicked("");
+    onClose();
+  };
   return (
     <>
       <TwoColumnGridDiv>
         <GridCell onClick={handleProjectModalOpen} id="nourish">
           <ProjectScreenshotImg
+            id="nourish"
             src={process.env.PUBLIC_URL + "/images/nourish2.png"}
           />
           <ProjectScreenshotImg
+            id="nourish"
             src={process.env.PUBLIC_URL + "/images/nourish3.png"}
           />
         </GridCell>
@@ -66,13 +73,21 @@ export const ProjectInformation = () => {
               place.
             </Details>
           </DeatilSection>
-          <CustomPageBtn color="#FF8FE6">Full Case Study</CustomPageBtn>
+          <CustomPageBtn
+            color="#FF8FE6"
+            href="https://docs.google.com/presentation/d/1sKQusaxX6htT8X8N2D4hr-NcApbdUcdI7BNnN-NJctU/edit?usp=sharing"
+            target="_blank"
+          >
+            Full Case Study
+          </CustomPageBtn>
         </GridCellDetails>
         <GridCell onClick={handleProjectModalOpen} id="p4p2">
           <ProjectScreenshotImg
+            id="p4p2"
             src={process.env.PUBLIC_URL + "/images/P4P2-removebg-preview.png"}
           />
           <ProjectScreenshotImg
+            id="p4p2"
             src={process.env.PUBLIC_URL + "/images/P4P3-removebg-preview.png"}
           />
         </GridCell>
@@ -105,28 +120,109 @@ export const ProjectInformation = () => {
               pets are returned to shelters
             </Details>
           </DeatilSection>
-          <CustomPageBtn color="#FF8FE6">Full Case Study</CustomPageBtn>
+          <CustomPageBtn
+            color="#FF8FE6"
+            href="https://docs.google.com/presentation/d/1htEdjif_JPe3lV2F5_eaRKxtoO-TRrUE2B8rdykKS9Y/edit?usp=sharing"
+            target="_blank"
+          >
+            Full Case Study
+          </CustomPageBtn>
         </GridCellDetails>
       </TwoColumnGridDiv>
       <Modal
-        onClose={onClose}
+        onClose={handleProjectModalClose}
         isOpen={isOpen}
         isCentered
         blockScrollOnMount={true}
+        motionPreset="scale"
       >
         <ModalOverlay />
-        <StyledModalContent>
-          <StyledModalHeader>
-            {projectClicked === "nourish"
-              ? "Over the course of three weeks, Nourish"
-              : "Designed over a three week time frame, Peeps For Pets"}
-          </StyledModalHeader>
-          <StyledModalBody>
-            {projectClicked === "nourish"
-              ? "was developed through a range of research methodolgies to create a system that improved the shopping experience of sustainable shoppers. Nourish allows Users to browse, filter, favorite, check out, and choose a pickup location in the app.  It also features a greenscore on products and how to have a more sustainable living. This process eliminates the frustration of finding quality sustainable items which are also affordable and places them into one user friendly app. "
-              : "removed the hassle of lengthy pet adoption processes, combined it into a more refined and easy to use app to match Users to a pet based on their needs, wants, and lifestyle. With the excessive rate at which pets are returned, Peeps For Pets helps decrease how many pets are returned by matching potential pet owners to a pet that they feel is bet suited for them and vice versa. By filling out a pet profile, Users can customize their features and be matched with a pet instantly in shelters near them. A profile of the pet which they choose is then displayed on the app with a description and option to apply."}
-          </StyledModalBody>
-        </StyledModalContent>
+        <ModalContent
+          maxWidth="672px"
+          maxHeight="599px"
+          padding="8px"
+          bg={`radial-gradient(50% 50% at 50% 50%, ${
+            projectClicked === "nourish" ? "#FF8FE6" : "#9FFF8F"
+          } 0%, white 100%)`}
+        >
+          <ModalHeader textAlign="center">
+            {projectClicked === "nourish" ? (
+              <span
+                style={{
+                  fontWeight: "500",
+                  fontSize: "36px",
+                  lineHeight: "42.23px",
+                }}
+              >
+                Over the course of three weeks,{" "}
+                <span
+                  style={{
+                    fontWeight: "700",
+                  }}
+                >
+                  Nourish
+                </span>
+              </span>
+            ) : (
+              <span
+                style={{
+                  fontWeight: "500",
+                  fontSize: "36px",
+                  lineHeight: "42.23px",
+                }}
+              >
+                Designed over a three week time frame,{" "}
+                <span
+                  style={{
+                    fontWeight: "700",
+                  }}
+                >
+                  Peeps For Pets
+                </span>
+              </span>
+            )}
+          </ModalHeader>
+          <ModalBody
+            fontWeight="400"
+            textAlign="center"
+            fontSize="24px"
+            lineHeight="28.15px"
+          >
+            {projectClicked === "nourish" ? (
+              <p>
+                was developed through a range of research methodolgies to create
+                a system that improved the shopping experience of sustainable
+                shoppers.
+                <br />
+                <br /> Nourish allows Users to browse, filter, favorite, check
+                out, and choose a pickup location in the app. It also features a
+                greenscore on products and how to have a more sustainable
+                living.
+                <br />
+                <br /> This process eliminates the frustration of finding
+                quality sustainable items which are also affordable and places
+                them into one user friendly app.
+              </p>
+            ) : (
+              <p>
+                removed the hassle of lengthy pet adoption processes, combined
+                it into a more refined and easy to use app to match Users to a
+                pet based on their needs, wants, and lifestyle.
+                <br />
+                <br />
+                With the excessive rate at which pets are returned, Peeps For
+                Pets helps decrease how many pets are returned by matching
+                potential pet owners to a pet that they feel is bet suited for
+                them and vice versa.
+                <br />
+                <br /> By filling out a pet profile, Users can customize their
+                features and be matched with a pet instantly in shelters near
+                them. A profile of the pet which they choose is then displayed
+                on the app with a description and option to apply.
+              </p>
+            )}
+          </ModalBody>
+        </ModalContent>
       </Modal>
     </>
   );
@@ -138,6 +234,9 @@ const TwoColumnGridDiv = styled.div`
   grid-gap: 1rem;
   padding: 1rem;
   margin: auto;
+  @media screen and (max-width: 1275px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 const GridCell = styled.div`
@@ -150,6 +249,9 @@ const GridCell = styled.div`
   margin: auto;
   background-color: whitesmoke;
   cursor: pointer;
+  @media screen and (max-width: 1275px) {
+    flex-direction: column;
+  }
 `;
 
 const GridCellDetails = styled(GridCell)`
@@ -159,37 +261,4 @@ const GridCellDetails = styled(GridCell)`
   margin: auto auto;
   grid-auto-rows: 250px;
   cursor: default;
-`;
-const StyledModalContent = styled(ModalContent)`
-  width: 100%;
-  height: 75%;
-`;
-
-const StyledModalHeader = styled(ModalHeader)`
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 42px;
-  text-align: center;
-
-  color: #000000;
-`;
-
-const StyledModalBody = styled(ModalBody)`
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 28px;
-  text-align: center;
-  padding: 0 78px;
-
-  color: #000000;
-
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    #9fff8f 0%,
-    rgba(196, 235, 226, 0) 100%
-  );
 `;

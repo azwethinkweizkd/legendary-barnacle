@@ -1,3 +1,9 @@
+html {
+  background: linear-gradient(180deg, #c4ebe2 0%, rgba(196, 235, 226, 0) 100%)
+    fixed;
+  background-attachment: fixed;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -10,5 +16,4 @@ body {
   width: 100vw;
   left: 0px;
   top: 0px;
-  background: linear-gradient(180deg, #c4ebe2 0%, rgba(196, 235, 226, 0) 100%);
 }

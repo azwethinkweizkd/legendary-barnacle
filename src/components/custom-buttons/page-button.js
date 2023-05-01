@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
-export const CustomPageBtn = styled.button`
+export const CustomPageBtn = styled.a`
   width: 244px;
-  height: 52px;
+  line-height: 52px;
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  line-height: 23px;
   background: ${(props) => (props.white ? "white" : "#c4ebe2")};
   border: ${(props) =>
     props.white ? "1px solid rgba(0, 0, 0, 0.36)" : "none"};

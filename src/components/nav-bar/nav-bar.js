@@ -10,13 +10,13 @@ export const NavBar = () => {
         <BaseNavLink color={`#9FFF8F`} to="/">
           Work
         </BaseNavLink>
-        <BaseNavLink color={`#FF8FE6`} to="/about-me" href="/#about">
+        <BaseNavLink color={`#FF8FE6`} to="/about-me">
           About
         </BaseNavLink>
-        <BaseNavLink color={`#F3FF6C`} to="/about-me" href="/#connect">
+        <BaseNavLink color={`#F3FF6C`} to="/about-me">
           Contact
         </BaseNavLink>
-        <BaseNavLink color={`#FFCE31`} to="/about-me" href="/#connect">
+        <BaseNavLink color={`#FFCE31`} to="/about-me">
           Resume
         </BaseNavLink>
       </LinksDiv>

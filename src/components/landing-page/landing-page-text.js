@@ -16,10 +16,10 @@ export const IntroText = () => (
       process and how I make a difference in the lives of everyday users.
     </ContentText>
     <ButtonGroup>
-      <CustomPageBtn color="#9FFF8F" href="/about-me">
+      <CustomPageBtn color="#9FFF8F" to="/about-me">
         About Me
       </CustomPageBtn>
-      <CustomPageBtn color="#FFCE31" white={true} href="/about-me">
+      <CustomPageBtn color="#FFCE31" white={true} to="/about-me">
         Contact Me
       </CustomPageBtn>
     </ButtonGroup>

@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const CustomPageBtn = styled.a`
+export const CustomPageBtn = styled(Link)`
   width: 244px;
   line-height: 52px;
   font-family: "Work Sans";

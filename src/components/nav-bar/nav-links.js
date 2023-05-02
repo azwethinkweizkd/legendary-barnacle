@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { Link as ReachLink } from "@reach/router";
+import { Link } from "react-router-dom";
 
-export const BaseNavLink = styled(ReachLink)`
+export const BaseNavLink = styled(Link)`
   background: transparent;
   font-family: "Work Sans";
   font-style: light;

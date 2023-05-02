@@ -1,5 +1,5 @@
 import React from "react";
-import { Router } from "@reach/router";
+import { Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { NavBar } from "./components/nav-bar/nav-bar";
 import { HomePage } from "./pages/home-page/home-page";
@@ -10,10 +10,10 @@ function App() {
     <div className="App">
       <NavBar />
       <AnimatePresence mode="wait">
-        <Router>
-          <HomePage path="/" />
-          <AboutMe path="/about-me" />
-        </Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about-me" element={<AboutMe />} />
+        </Routes>
       </AnimatePresence>
     </div>
   );

@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/static/css/main.b202c524.css",
-    "main.js": "/static/js/main.567b2372.js",
+    "main.js": "/static/js/main.df0b7cb1.js",
     "static/js/787.18a26cbf.chunk.js": "/static/js/787.18a26cbf.chunk.js",
     "static/media/Logo2-removebg-preview.png": "/static/media/Logo2-removebg-preview.d184090218bdc71416dc.png",
-    "static/media/prototype-icon.svg": "/static/media/prototype-icon.7e820511a1027ca8249049760034a623.svg",
+    "static/media/prototype-icon.svg": "/static/media/prototype-icon.1f034f9fddfb80ca26ccdc043151c4f0.svg",
     "static/media/heart-svgrepo-com.svg": "/static/media/heart-svgrepo-com.9f514afa62a60bac874b6431cf76bb3f.svg",
     "static/media/light-bulb-svgrepo-com.svg": "/static/media/light-bulb-svgrepo-com.0e88c4366c8a028c47509d1d2b6b04b2.svg",
     "static/media/magnifying-glass-svgrepo-com.svg": "/static/media/magnifying-glass-svgrepo-com.16d1625a97c1d7ab01505a3a210c18b4.svg",
     "static/media/iphone-svgrepo-com.svg": "/static/media/iphone-svgrepo-com.d15f6924a9c88253c022781ff9ce62a1.svg",
     "index.html": "/index.html",
     "main.b202c524.css.map": "/static/css/main.b202c524.css.map",
-    "main.567b2372.js.map": "/static/js/main.567b2372.js.map",
+    "main.df0b7cb1.js.map": "/static/js/main.df0b7cb1.js.map",
     "787.18a26cbf.chunk.js.map": "/static/js/787.18a26cbf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b202c524.css",
-    "static/js/main.567b2372.js"
+    "static/js/main.df0b7cb1.js"
   ]
 }

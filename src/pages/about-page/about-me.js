@@ -1,7 +1,18 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Tooltip, WrapItem } from "@chakra-ui/react";
+import {
+  Tooltip,
+  WrapItem,
+  // Modal,
+  // ModalOverlay,
+  // ModalContent,
+  // ModalHeader,
+  // ModalBody,
+  // useDisclosure,
+} from "@chakra-ui/react";
+import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
 import styled from "styled-components";
+import resume from "../../assets/pdf/Bri-Pepper-Resume.pdf";
 import PrototypeIcon from "../../assets/svg/prototype-icon.svg";
 import LightBulbIcon from "../../assets/svg/light-bulb-svgrepo-com.svg";
 import PhoneIcon from "../../assets/svg/iphone-svgrepo-com.svg";
@@ -42,6 +53,17 @@ const imgArrMap = [
 ];
 
 export const AboutMe = () => {
+  // const { isOpen, onOpen, onClose } = useDisclosure();
+  // const [numPages, setNumPages] = useState(null);
+  // const [pageNumber, setPageNumber] = useState(1);
+
+  // function onDocumentLoadSuccess({ numPages }) {
+  //   setNumPages(numPages);
+  // }
+  // const handleOpenResume = (e) => {
+  //   e.preventDefault();
+  //   onOpen();
+  // };
   const ellipse = (x) => {
     // (x/2)^2 + y^2 = 100^2
     let ySquare = 10000 - (x / 2) * (x / 2);
@@ -182,12 +204,43 @@ export const AboutMe = () => {
           </ParagraphBlock>
           <ParagraphBlock>
             <SpanHighlight>Let’s get connected</SpanHighlight> on LinkedIn at{" "}
-            <a href="https://www.linkedin.com/in/bri-pepper/">
+            <a
+              href="https://www.linkedin.com/in/bri-pepper/"
+              style={{ color: "blueviolet" }}
+            >
               https://www.linkedin.com/in/bri-pepper/
             </a>
           </ParagraphBlock>
+          <a href={resume} without rel="noopener noreferrer" target="_blank">
+            <ResumeBtn trailingIcon="picture_as_pdf" label="Resume">
+              View Resume
+            </ResumeBtn>
+          </a>
         </AboutConnectContainer>
       </SectionGrid>
+      {/* <Modal
+        onClose={onClose}
+        isOpen={isOpen}
+        blockScrollOnMount={true}
+        motionPreset="scale"
+      >
+        <ModalOverlay />
+        <ModalContent maxWidth="672px" maxHeight="full" padding="8px">
+          <ModalBody
+            fontWeight="400"
+            textAlign="center"
+            fontSize="24px"
+            lineHeight="28.15px"
+          >
+            <Document file={resume} onLoadSuccess={onDocumentLoadSuccess}>
+              <Page pageNumber={pageNumber} />
+            </Document>
+            <p>
+              Page {pageNumber} of {numPages}
+            </p>
+          </ModalBody>
+        </ModalContent>
+      </Modal> */}
     </motion.section>
   );
 };
@@ -232,6 +285,30 @@ const ParagraphBlock = styled.p`
   font-weight: 300;
   font-size: 20px;
   line-height: 23.46px;
+`;
+
+const ResumeBtn = styled.button`
+  width: 244px;
+  line-height: 52px;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  background: ${(props) => (props.white ? "white" : "#c4ebe2")};
+  border: ${(props) =>
+    props.white ? "1px solid rgba(0, 0, 0, 0.36)" : "none"};
+  border-radius: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    background: ${(props) => props.color};
+    font-style: normal;
+    font-weight: 700;
+    border: none;
+  }
 `;
 
 const container = {

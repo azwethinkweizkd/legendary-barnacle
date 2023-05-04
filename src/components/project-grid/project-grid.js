@@ -7,7 +7,7 @@ import {
   ModalBody,
   useDisclosure,
 } from "@chakra-ui/react";
-import { CustomPageBtn } from "../custom-buttons/page-button";
+import { CustomPageATag } from "../custom-buttons/page-button";
 import {
   DeatilSection,
   Details,
@@ -73,13 +73,13 @@ export const ProjectInformation = () => {
               place.
             </Details>
           </DeatilSection>
-          <CustomPageBtn
+          <CustomPageATag
             color="#FF8FE6"
             href="https://docs.google.com/presentation/d/1sKQusaxX6htT8X8N2D4hr-NcApbdUcdI7BNnN-NJctU/edit?usp=sharing"
             target="_blank"
           >
             Full Case Study
-          </CustomPageBtn>
+          </CustomPageATag>
         </GridCellDetails>
         <GridCell onClick={handleProjectModalOpen} id="p4p2">
           <ProjectScreenshotImg
@@ -120,13 +120,13 @@ export const ProjectInformation = () => {
               pets are returned to shelters
             </Details>
           </DeatilSection>
-          <CustomPageBtn
+          <CustomPageATag
             color="#FF8FE6"
             href="https://docs.google.com/presentation/d/1htEdjif_JPe3lV2F5_eaRKxtoO-TRrUE2B8rdykKS9Y/edit?usp=sharing"
             target="_blank"
           >
             Full Case Study
-          </CustomPageBtn>
+          </CustomPageATag>
         </GridCellDetails>
       </TwoColumnGridDiv>
       <Modal

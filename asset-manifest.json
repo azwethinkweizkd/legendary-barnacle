@@ -1,8 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.b202c524.css",
-    "main.js": "/static/js/main.df0b7cb1.js",
+    "main.js": "/static/js/main.f68aa036.js",
     "static/js/787.18a26cbf.chunk.js": "/static/js/787.18a26cbf.chunk.js",
+    "pdf.worker.js": "/a7e897e683424a1d83d9b7206281e25b.js",
+    "static/media/Bri-Pepper-Resume.pdf": "/static/media/Bri-Pepper-Resume.d4481db95ea16865687b.pdf",
     "static/media/Logo2-removebg-preview.png": "/static/media/Logo2-removebg-preview.d184090218bdc71416dc.png",
     "static/media/prototype-icon.svg": "/static/media/prototype-icon.1f034f9fddfb80ca26ccdc043151c4f0.svg",
     "static/media/heart-svgrepo-com.svg": "/static/media/heart-svgrepo-com.9f514afa62a60bac874b6431cf76bb3f.svg",
@@ -11,11 +13,11 @@
     "static/media/iphone-svgrepo-com.svg": "/static/media/iphone-svgrepo-com.d15f6924a9c88253c022781ff9ce62a1.svg",
     "index.html": "/index.html",
     "main.b202c524.css.map": "/static/css/main.b202c524.css.map",
-    "main.df0b7cb1.js.map": "/static/js/main.df0b7cb1.js.map",
+    "main.f68aa036.js.map": "/static/js/main.f68aa036.js.map",
     "787.18a26cbf.chunk.js.map": "/static/js/787.18a26cbf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b202c524.css",
-    "static/js/main.df0b7cb1.js"
+    "static/js/main.f68aa036.js"
   ]
 }

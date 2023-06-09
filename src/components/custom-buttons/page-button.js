@@ -20,7 +20,6 @@ export const CustomPageBtn = styled(Link)`
     background: ${(props) => props.color};
     font-style: normal;
     font-weight: 700;
-    border: none;
   }
 
   &:visited {

@@ -17,3 +17,13 @@ body {
   left: 0px;
   top: 0px;
 }
+
+.textLayer {
+  visibility: hidden;
+  height: 0;
+}
+
+.annotationLayer {
+  visibility: hidden;
+  height: 0;
+}

@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 
-export const BaseNavLink = styled(Link)`
+export const BaseNavLink = styled(RouterLink)`
   background: transparent;
   font-family: "Work Sans";
   font-style: light;

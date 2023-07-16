@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link as RouterLink } from "react-router-dom";
 import { BPNavImg } from "./top-nav-image";
 import { BaseNavLink } from "./nav-links";
 
@@ -11,9 +12,15 @@ export const NavBar = () => {
   };
   return (
     <StyledNav>
-      <BPNavImg />
+      <RouterLink to="/">
+        <BPNavImg />
+      </RouterLink>
       <LinksDiv>
-        <BaseNavLink color={`#9FFF8F`} to="/">
+        <BaseNavLink
+          color={`#9FFF8F`}
+          to="/"
+          onClick={() => ScrollToSection("work")}
+        >
           Work
         </BaseNavLink>
         <BaseNavLink

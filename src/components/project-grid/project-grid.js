@@ -32,7 +32,7 @@ export const ProjectInformation = () => {
     onClose();
   };
   return (
-    <>
+    <section id="work">
       <TwoColumnGridDiv>
         <GridCell onClick={handleProjectModalOpen} id="nourish">
           <ProjectScreenshotImg
@@ -224,7 +224,7 @@ export const ProjectInformation = () => {
           </ModalBody>
         </ModalContent>
       </Modal>
-    </>
+    </section>
   );
 };
 

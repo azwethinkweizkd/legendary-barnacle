@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.50e080a9.css",
-    "main.js": "/static/js/main.f7ec4e05.js",
+    "main.js": "/static/js/main.ffe7ba2a.js",
     "static/js/787.18a26cbf.chunk.js": "/static/js/787.18a26cbf.chunk.js",
     "static/media/Bri-Pepper-Resume.pdf": "/static/media/Bri-Pepper-Resume.3c58551d025626313a76.pdf",
     "static/media/Logo2-removebg-preview.png": "/static/media/Logo2-removebg-preview.d184090218bdc71416dc.png",
@@ -12,11 +12,11 @@
     "static/media/iphone-svgrepo-com.svg": "/static/media/iphone-svgrepo-com.d15f6924a9c88253c022781ff9ce62a1.svg",
     "index.html": "/index.html",
     "main.50e080a9.css.map": "/static/css/main.50e080a9.css.map",
-    "main.f7ec4e05.js.map": "/static/js/main.f7ec4e05.js.map",
+    "main.ffe7ba2a.js.map": "/static/js/main.ffe7ba2a.js.map",
     "787.18a26cbf.chunk.js.map": "/static/js/787.18a26cbf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.50e080a9.css",
-    "static/js/main.f7ec4e05.js"
+    "static/js/main.ffe7ba2a.js"
   ]
 }

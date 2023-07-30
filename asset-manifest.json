@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.50e080a9.css",
-    "main.js": "/static/js/main.ffe7ba2a.js",
+    "main.css": "/static/css/main.8a4d8ab1.css",
+    "main.js": "/static/js/main.4ee44a76.js",
     "static/js/787.18a26cbf.chunk.js": "/static/js/787.18a26cbf.chunk.js",
     "static/media/Bri-Pepper-Resume.pdf": "/static/media/Bri-Pepper-Resume.3c58551d025626313a76.pdf",
     "static/media/Logo2-removebg-preview.png": "/static/media/Logo2-removebg-preview.d184090218bdc71416dc.png",
@@ -11,12 +11,12 @@
     "static/media/magnifying-glass-svgrepo-com.svg": "/static/media/magnifying-glass-svgrepo-com.16d1625a97c1d7ab01505a3a210c18b4.svg",
     "static/media/iphone-svgrepo-com.svg": "/static/media/iphone-svgrepo-com.d15f6924a9c88253c022781ff9ce62a1.svg",
     "index.html": "/index.html",
-    "main.50e080a9.css.map": "/static/css/main.50e080a9.css.map",
-    "main.ffe7ba2a.js.map": "/static/js/main.ffe7ba2a.js.map",
+    "main.8a4d8ab1.css.map": "/static/css/main.8a4d8ab1.css.map",
+    "main.4ee44a76.js.map": "/static/js/main.4ee44a76.js.map",
     "787.18a26cbf.chunk.js.map": "/static/js/787.18a26cbf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.50e080a9.css",
-    "static/js/main.ffe7ba2a.js"
+    "static/css/main.8a4d8ab1.css",
+    "static/js/main.4ee44a76.js"
   ]
 }

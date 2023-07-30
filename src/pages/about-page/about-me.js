@@ -72,6 +72,7 @@ export const AboutMe = () => {
         stiffness: 260,
         damping: 20,
       }}
+      style={{ width: "100vw", marginLeft: "auto", marginRight: "auto" }}
     >
       <SectionGrid id="about-me">
         <AboutConnectContainer>
@@ -103,7 +104,7 @@ export const AboutMe = () => {
             pleasing design by deadline.
           </ParagraphBlock>
         </AboutConnectContainer>
-        <div style={{ position: "relative" }}>
+        <IconAndImgsContainer>
           <motion.ul
             className="container"
             variants={container}
@@ -129,7 +130,7 @@ export const AboutMe = () => {
                   textAlign="center"
                   padding="4"
                 >
-                  <motion.img
+                  <ArchedIcons
                     variants={item}
                     whileHover={{ scale: 1.2, rotate: 360 }}
                     src={img.icon}
@@ -152,10 +153,10 @@ export const AboutMe = () => {
             src={process.env.PUBLIC_URL + "images/BriBlush.png"}
             style={{ position: "absolute", top: "75px", left: "280px" }}
           />
-        </div>
+        </IconAndImgsContainer>
       </SectionGrid>
       <SectionGrid id="connect">
-        <motion.div
+        <PhoneImageContainer
           className="card-container"
           initial="offscreen"
           whileInView="onscreen"
@@ -165,7 +166,7 @@ export const AboutMe = () => {
             variants={cardVariants}
             src={process.env.PUBLIC_URL + "images/Hands - Phone.png"}
           />
-        </motion.div>
+        </PhoneImageContainer>
         <AboutConnectContainer>
           <SectionTitles>Let's Connect!</SectionTitles>
           <ParagraphBlock>
@@ -196,7 +197,11 @@ export const AboutMe = () => {
             target="_blank"
             style={{ marginLeft: "auto", marginRight: "auto" }}
           >
-            <ResumeBtn trailingIcon="picture_as_pdf" label="Resume">
+            <ResumeBtn
+              trailingIcon="picture_as_pdf"
+              label="Resume"
+              color="#F3FF6C"
+            >
               View Resume
             </ResumeBtn>
           </a>
@@ -218,7 +223,110 @@ const SectionTitles = styled.h2`
 const SectionGrid = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: 1268px) {
+    display: flex;
+    flex-direction: column-reverse;
+
+    justify-items: center;
+  }
+`;
+
+const IconAndImgsContainer = styled.aside`
+  position: relative;
+
+  @media screen and (max-width: 1268px) {
+    top: 330px;
+    left: 128px;
+  }
+  @media screen and (max-width: 1140px) {
+    top: 400px;
+    left: 96px;
+  }
+  @media screen and (max-width: 953px) {
+    top: 425px;
+    left: 72px;
+  }
+  @media screen and (max-width: 887px) {
+    top: 455px;
+    left: 64px;
+  }
+  @media screen and (max-width: 832px) {
+    top: 475px;
+    left: 16px;
+  }
+  @media screen and (max-width: 813px) {
+    top: 525px;
+    left: 8px;
+  }
+  @media screen and (max-width: 791px) {
+    left: 0px;
+  }
+  @media screen and (max-width: 759px) {
+    left: -24px;
+  }
+  @media screen and (max-width: 711px) {
+    left: -72px;
+  }
+  @media screen and (max-width: 673px) {
+    top: 600px;
+    left: -108px;
+  }
+  @media screen and (max-width: 610px) {
+    top: 625px;
+  }
+  @media screen and (max-width: 590px) {
+    top: 635px;
+    left: -124px;
+  }
+  @media screen and (max-width: 554px) {
+    top: 650px;
+    left: -132px;
+  }
+  @media screen and (max-width: 541px) {
+    top: 700px;
+    left: -145px;
+  }
+  @media screen and (max-width: 505px) {
+    top: 725px;
+    left: -156px;
+  }
+  @media screen and (max-width: 487px) {
+    top: 735px;
+    left: -164px;
+  }
+  @media screen and (max-width: 483px) {
+    top: 750px;
+    left: -172px;
+  }
+  @media screen and (max-width: 475px) {
+    top: 775px;
+    left: -178px;
+  }
+  @media screen and (max-width: 458px) {
+    display: none;
+    visibility: hidden;
+  }
+`;
+
+const ArchedIcons = styled(motion.img)`
+  position: absolute;
+  z-index: 99;
+
+  @media screen and (max-width: 1268px) {
+    width: fit-content;
+  }
+`;
+
+const PhoneImageContainer = styled(motion.aside)`
+  @media screen and (max-width: 1268px) {
+    display: none;
+    visibility: hidden;
+    height: 0%;
+  }
 `;
 
 const AboutConnectImgs = styled(motion.img)`
@@ -228,7 +336,7 @@ const AboutConnectImgs = styled(motion.img)`
 `;
 
 const AboutConnectContainer = styled.div`
-  width: 50%;
+  width: 75%;
   margin-left: auto;
   margin-right: auto;
 `;
@@ -246,9 +354,12 @@ const ParagraphBlock = styled.p`
   font-weight: 300;
   font-size: 20px;
   line-height: 23.46px;
+  @media screen and (max-width: 1268px) {
+    padding: 0;
+  }
 `;
 
-const ResumeBtn = styled.button`
+const ResumeBtn = styled.div`
   width: 244px;
   line-height: 52px;
   font-family: "Work Sans";
@@ -264,6 +375,8 @@ const ResumeBtn = styled.button`
   text-align: center;
   cursor: pointer;
   text-decoration: none;
+  margin-top: 12px;
+  margin-bottom: 12px;
   &:hover {
     background: ${(props) => props.color};
     font-style: normal;

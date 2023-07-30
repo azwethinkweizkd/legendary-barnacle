@@ -1,21 +1,44 @@
-html {
+html,
+body {
   background: linear-gradient(180deg, #c4ebe2 0%, rgba(196, 235, 226, 0) 100%)
     fixed;
   background-attachment: fixed;
-}
-
-body {
+  width: 100%;
+  height: auto;
   margin: 0;
   overflow-x: hidden;
+  overflow-y: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .App {
-  position: absolute;
+  background: linear-gradient(180deg, #c4ebe2 0%, rgba(196, 235, 226, 0) 100%)
+    fixed;
+  background-attachment: fixed;
+  overflow: hidden;
   width: 100vw;
   left: 0px;
   top: 0px;
+}
+
+section #connect {
+  padding-top: 128px;
+  @media screen and (max-width: 1664px) {
+    padding-top: 64px;
+  }
+  @media screen and (max-width: 1324px) {
+    padding-top: 28px;
+  }
+  @media screen and (max-width: 1268px) {
+    padding-top: 675px;
+  }
+  @media screen and (max-width: 673px) {
+    padding-top: 700px;
+  }
+  @media screen and (max-width: 458px) {
+    padding-top: 12px;
+  }
 }
 
 .textLayer {

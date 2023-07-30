@@ -23,4 +23,11 @@ export const BaseNavLink = styled(RouterLink)`
     font-size: 20px;
     line-height: 23px;
   }
+
+  @media screen and (max-width: 374px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 320px) {
+    font-size: 16px;
+  }
 `;

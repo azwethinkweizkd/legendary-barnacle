@@ -60,6 +60,10 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: 1469px) {
+    justify-content: space-evenly;
+  }
+
   @media screen and (max-width: 850px) {
     flex-direction: column;
   }

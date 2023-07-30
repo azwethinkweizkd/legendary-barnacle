@@ -249,7 +249,8 @@ const GridCell = styled.div`
   margin: auto;
   background-color: whitesmoke;
   cursor: pointer;
-  @media screen and (max-width: 1275px) {
+
+  @media screen and (max-width: 429px) {
     flex-direction: column;
   }
 `;

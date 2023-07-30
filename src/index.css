@@ -24,6 +24,12 @@ body {
 
 section #connect {
   padding-top: 128px;
+  @media screen and (min-width: 2281px) {
+    padding-top: 225px;
+  }
+  @media screen and (min-width: 2177px) {
+    padding-top: 164px;
+  }
   @media screen and (max-width: 1664px) {
     padding-top: 64px;
   }

@@ -237,6 +237,13 @@ const SectionGrid = styled.section`
 
 const IconAndImgsContainer = styled.aside`
   position: relative;
+  @media screen and (min-width: 2281px) {
+    top: -8px;
+    right: 164px;
+  }
+  @media screen and (min-width: 2177px) {
+    left: 92px;
+  }
 
   @media screen and (max-width: 1268px) {
     top: 330px;

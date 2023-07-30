@@ -25,6 +25,11 @@ export const CustomPageBtn = styled(Link)`
   &:visited {
     color: black;
   }
+
+  @media screen and (max-width: 375px) {
+    line-height: 42px;
+    width: 183px;
+  }
 `;
 export const CustomPageATag = styled.a`
   width: 244px;

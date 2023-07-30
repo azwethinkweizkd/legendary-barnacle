@@ -7,4 +7,8 @@ export const LandingPageImg = styled.img`
   border-radius: 25px;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (max-width: 515px) {
+    width: 90%;
+  }
 `;

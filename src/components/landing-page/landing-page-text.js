@@ -88,4 +88,7 @@ const ButtonGroup = styled.div`
   margin: 24px auto;
   display: flex;
   justify-content: center;
+  @media screen and (max-width: 375px) {
+    justify-content: space-around;
+  }
 `;
